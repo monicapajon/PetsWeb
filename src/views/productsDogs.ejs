@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head')%>
+
+<body class="boee">
+    
+    <%- include('./partials/header')%>
+
+<main class="product_main">
+    <div id="todo-producto"></div>
+    <!-- <li class="product_main--li"><a href="/products/perros" class="product_main--a">Todos los productos para perros</a></li> -->
+    <ul class="product_main--ul">
+        <div class="product_main--filtro-flex">
+      
+            
+
+
+        <div class="product_main_filtros" id="producto_orden">
+       
+    </div>
+
+    <div class="product_main_filtros" id="productos_tipo">
+    
+
+</div>
+
+
+
+
+
+    </ul>
+<div class="product_master1">
+    <div class="product_master">
+   
+    <div class="products_main_flexbox" id="container-products-card">
+
+    <%# products.forEach(({name,image,id, price}) => { %>
+
+       
+  <!--   <div class="header products_main_producto">
+        <a href="/products/productDetail/<%#= id %>">  
+      
+        <div class="products_main_producto--img">
+        <img src="/images/products/<%#= image %>" class="card-img-top" alt="...">
+
+
+
+
+    </div>
+</a>
+<div class="products_main_producto--description">
+    <div class="card-body">
+        <span class="price-products-dog-cat">$ <#%= price %></span>
+        <h5 ><#%= name %></h5>
+    </div>
+
+
+
+
+
+
+        </div>
+                                    
+    </div>
+ -->
+ 
+<%# }) %>
+    
+</div>
+
+</div>
+
+</div>
+
+<%- include('./partials/paginator')%>
+
+</main>
+
+
+<%- include('./partials/footer')%>
+
+<%- include('./partials/scripts')%>
+<script src="/javascripts/paginatorDog.js"></script>
+<script src="/javascripts/modoOscuro.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head')%>
+
+<body class="boee">
+
+    <%- include('./partials/header')%>
+
+    <main class="register__main">
+        <div class="header register__main__div">
+            <h3>Creá tu cuenta</h3>
+            <form action="/users/register" method="POST" enctype="multipart/form-data" id="formRegister">
+                <div class="register__main__div--info">
+                    <div>
+                        <label for="firstName" class="form-label"></label>
+                        <i class="fa-solid fa-user"></i><input type="text" class="register__main__div--info <%= (locals.errors && errors.firstName) && 'errorInput'%>" placeholder="<%= locals.errors && errors.firstName ? errors.firstName.msg : "Ingresá tu nombre" %>" name="firstName" id="firstName" value="<%= locals.old && old.firstName ? old.firstName : null %>" autofocus>
+                    </div>
+                    <div>
+                        <label for="lastName" class="form-label"></label>
+                        <i class="fa-solid fa-user"></i><input type="text" class="register__main__div--info <%= (locals.errors && errors.lastName) && 'errorInput'%>" placeholder="<%= locals.errors && errors.lastName ? errors.lastName.msg : "Ingresá tu apellido" %>" name="lastName" id="lastName" value="<%= locals.old && old.lastName ? old.lastName : null%>">
+                    </div>
+                    <div>
+                        <label for="email" class="form-label"></label>
+                        <i class="fa-regular fa-envelope"></i><input type="email" class="register__main__div--info <%= (locals.errors && errors.email) && 'errorInput'%>" placeholder="<%= locals.errors && errors.email ? errors.email.msg : "Ingresá tu correo electrónico" %>" name="email" id="email" value="<%= locals.old && old.email ? old.email : null%>">
+                    </div>
+                    <div>
+                        <label for="password" class="form-label"></label>
+                        <i class="fa-solid fa-lock"></i><input type="password" class="register__main__div--info <%= (locals.errors && errors.password) && 'errorInput'%>" placeholder="<%= locals.errors && errors.password ? errors.password.msg : "Ingresá contraseña" %>" name="password" id="password">
+                    </div>
+                    <div>
+                        <label for="password2" class="form-label"></label>
+                        <i class="fa-solid fa-lock"></i><input type="password" class="register__main__div--info <%= (locals.errors && errors.password2) && 'errorInput'%>" placeholder="<%= locals.errors && errors.password2 ? errors.password2.msg : "Confirmar contraseña" %>" name="password2" id="password2">
+                    </div>
+                    <div>
+                        <span>Avatar:</span>
+                        <input type="file" class="fancy-file" name="avatar" id="avatar">
+                        <p class="text-danger small ms-2" id="avatarError"></p>
+                        <label for="avatar" id="avatarPreview">
+                            <span class="fancy-file__fancy-file-name">
+                                <span id="file-name">Ningún archivo seleccionado</span>
+                            </span>
+                            <span class="fancy-file__fancy-file-button">Buscar archivo</span>
+                        </label>
+                        
+                    </div>
+                    <div class="col-12 col-md-6 d-flex justify-content-around" id="boxImagesPreview">
+                    </div>
+
+                </div>
+                <div class="register__main__div--info--login">
+                    <small class="register__main__small--check">
+                        ¿Estás registrado? <a href="/users/login">Ingresá</a>
+                    </small>
+                </div>
+                <div class="register__main__div--button">
+                    <p class="text-danger small" id="error-form"></p>
+                    <button type="submit">Registrarse</button>
+                </div>
+                <div class="register__main__div--button-google">
+                    <button type="submit">
+                        <a href="/auth/login/google"> Registrate con <img src="/images/google-small.png"></a>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+    
+    <%- include('./partials/footer')%>
+    <%- include('./partials/scripts')%>
+
+    
+
+    <script src="/javascripts/formRegister.js"></script>
+    <script src="/javascripts/modoOscuro.js"></script>
+    <script src="/javascripts/fancy-file.js"></script>
+</body>
+</html>

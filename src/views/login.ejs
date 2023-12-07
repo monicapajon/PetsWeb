@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head')%>
+
+<body class="boee">
+    <%- include('./partials/header')%>
+
+
+    <main class="register__main">
+        <div class="header register__main__div">
+            <div class="main__login__div--iniciarSesion">
+                <h2>Iniciar sesión</h2>
+            </div>
+                <form action="" method="POST" id="formRegister" >
+                    <div class="register__main__div--info">
+                        <div>
+                            <label for="email" class="form-label"></label>
+                            <i class="fa-regular fa-envelope"></i><input type="email" class="register__main__div--info <%= (locals.errors && errors.email) && 'errorInput'%>" placeholder="<%= locals.errors && errors.email ? errors.email.msg : "Ingresá tu correo electrónico" %>" name="email" id="emailLogin">
+                        </div>
+                        <div>
+                            <label for="password" class="form-label"></label>
+                            <i class="fa-solid fa-lock"></i><input type="password" class="register__main__div--info <%= (locals.errors && errors.password) && 'errorInput'%>" placeholder="<%= locals.errors && errors.password ? errors.password.msg : "Ingresá contraseña" %>" name="password" id="passwordLogin">
+                        </div>
+                        <div class="register__main__div--button">
+                            <button type="submit">Ingresá</button>
+                        </div>
+                        <div class="register__main__div--button-google">
+                            <button type="submit">
+                                <a href="/auth/login/google"> Logueate con <img src="/images/google-small.png"></a>
+                            </button>
+                        </div>
+                    </div>
+
+
+            <div>
+                <input type="checkbox" name="recordarUsuario" id="recordarUsuario">
+                <label for="recordarUsuario">Recordar usuario</label>
+            </div>
+
+           
+            <div class="main__login--olvidarContraseña">
+                <small> ¿Olvidaste tu contraseña? <a href="/register"> Recuperá tu contraseña</a></small>
+            </div>
+            <div class="main__login--estasRegistrado">
+                <small> ¿No estas registrado? <a href="/users/register"> Registrate </a></small>
+            </div>
+        </form>
+        </div>
+    </main>
+
+    <%- include('./partials/footer')%>
+    <%- include('./partials/scripts')%>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+<script src="/javascripts/formLogin.js"></script>
+<script src="/javascripts/modoOscuro.js"></script>
+</body>
+</html>
+
+

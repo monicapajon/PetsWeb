@@ -1,0 +1,244 @@
+
+.negruuu{
+    background: #44444447;
+    transition:  2s;
+}
+
+
+
+.home__main__section__div{
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    background: var(--gradientePrincipal);
+    margin: 33px 0px 33px 0px;
+}
+
+.home__main__section--h2{
+    text-align: center;
+}
+
+.home__main__section--h2 h2{
+    
+}
+
+.home__main__section--stars{
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.home__main__section--stars i{
+    color: gold;
+    margin: 6px;
+}
+
+.home__main__section--carruselProductos{
+    padding: 30px;
+}
+
+.home__main__section--carruselProductos a{
+    text-decoration: none;
+}
+
+.home__main__section--carruselProductos i{
+    background: var(--gradientePrincipal);
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.carousel-products-item{
+    margin: 0 10px;
+    text-align: center;
+}
+
+.card-title {
+    max-width: 500px; /* Ajusta el valor max */
+    white-space: nowrap;
+    overflow: hidden; /* Si el texto sobrepasa, desaparece el excedente */
+    text-overflow: ellipsis; /* y le pone puntos suspensivos... */
+}
+
+.price-home{
+    color: #03b103;
+    font-size: 4vh;
+}
+
+.home__main__section__div--ufo{
+    display: flex;
+    flex-wrap: nowrap;
+    color: white;
+    padding: 15px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.07) 0%, rgba(2, 152, 227, 0.7) 33.33%, rgba(1, 58, 87, 0.7) 66.67%, rgba(0, 0, 0, 0.7) 100%);;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px;
+}
+
+.home__main__section__div--ufo img{
+    width: 40%;
+    position: relative;
+    animation-name: ufo;
+    animation-duration: 2.5s;  
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ufo {
+    0% {top: -40px;}
+    100% {top: 40px;}
+  }
+
+.home__main__section h4{
+    align-self: center;
+}
+
+.carousel-products-item{
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.07) 0%, rgba(2, 152, 227, 0.7) 33.33%, rgba(1, 58, 87, 0.7) 66.67%, rgba(0, 0, 0, 0.7) 100%);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+
+.carousel-products-itemxd{
+    background: #ffffff26;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.carousel-products-item h5, p{
+    color: white;
+}
+
+/* Animación carrusel del home */
+.carousel-products-item:hover {
+    transform: scale(1.05);  /*Escala la imagen al pasar el cursor*/
+    transition: all 0.3s ease-in-out; /*El tiempo que tarda en hacer la animación*/
+    box-shadow: 30px rgba(186, 85, 211);
+    filter: drop-shadow(0 10px 10px rgba(186, 85, 211));
+}
+
+.home__main__section__div--detalles{
+    display: none;
+}
+
+.testimonials {
+    display: none;
+}
+
+/* Media query: */
+/* tablet */
+@media (min-width: 361px){
+    .home__main__section__div{
+        display: flex;
+        padding: 15px;
+        justify-content: center;
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.07) 0%, rgba(2, 152, 227, 0.7) 33.33%, rgba(1, 58, 87, 0.7) 66.67%, rgba(0, 0, 0, 0.7) 100%);;
+        margin: 33px 0px 33px 0px;
+    }
+
+    .home__main__section__div--ufo{
+        background: var(--gradientePrincipal);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .home__main__section__div--detalles{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        color: white;
+        margin: 30px;
+    }
+    
+    .home__main__section__div--pagos{
+        background: var(--gradientePrincipal);
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .home__main__section__div--pagos i{
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+    }
+
+    .home__main__section__div--seguridad{
+        background: var(--gradientePrincipal);
+        border-radius: 20px;
+        padding: 20px;
+    }
+    
+    .home__main__section__div--seguridad i{
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+    }
+
+    .testimonials {
+        display: block;
+        background: var(--gradientePrincipal);
+        margin: 20px;
+        padding: 10px;
+    }
+}
+
+/* desktop */
+@media (min-width: 769px){
+    .home__main__section__div{
+        display: flex;
+        padding: 15px;
+        justify-content: center;
+        background: var(--gradientePrincipal);
+        margin: 33px 0px 33px 0px;
+    }
+
+    .home__main__section__div--ufo{
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.07) 0%, rgba(2, 152, 227, 0.7) 33.33%, rgba(1, 58, 87, 0.7) 66.67%, rgba(0, 0, 0, 0.7) 100%);;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .home__main__section__div--detalles{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        color: white;
+        margin: 30px;
+    }
+    
+    .home__main__section__div--pagos{
+        background: var(--gradientePrincipal);
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .home__main__section__div--pagos i{
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+    }
+
+    .home__main__section__div--seguridad{
+        background: var(--gradientePrincipal);
+        border-radius: 20px;
+        padding: 20px;
+    }
+    
+    .home__main__section__div--seguridad i{
+        display: flex;
+        justify-content: center;
+        font-size: 50px;
+    }
+
+    .testimonials {
+        display: block;
+        background: var(--gradientePrincipal);
+        margin: 20px;
+        padding: 10px;
+    }
+}
